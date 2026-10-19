@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Habbe · Arındırma ve zekât hesabı</title>
+<meta name="description" content="Habbe, katılım hisselerinizin arındırma tutarını dönem dönem hesaplar, zekât hesabınıza yardım eder ve her rakamın kaynağını gösterir. Verileriniz telefonunuzdan çıkmaz.">
+<style>
+  :root{
+    --kagit:#F7F5EF;
+    --kart:#FFFFFF;
+    --metin:#1B1E2B;
+    --ikincil:#4D5060;
+    --cizgi:#EEEBE3;
+    --mor:#7440AF;
+    --mor-koyu:#5A2F8C;
+    --mor-yuzey:#EFE8F7;
+    --golge:0 1px 2px rgba(27,30,43,.05),0 8px 24px rgba(27,30,43,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --kagit:#121319;
+      --kart:#1C1E27;
+      --metin:#ECE9E1;
+      --ikincil:#B5B2AB;
+      --cizgi:#2E3140;
+      --mor:#B98AE6;
+      --mor-koyu:#EAC3FE;
+      --mor-yuzey:#343241;
+      --golge:none;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--kagit);
+    color:var(--metin);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sar{max-width:880px;margin:0 auto;padding:0 20px}
+  header{padding:28px 0 8px}
+  .marka{display:flex;align-items:center;gap:12px;color:var(--metin);text-decoration:none}
+  .simge{width:44px;height:44px;border-radius:999px;background:var(--mor);color:#F7F5EF;display:flex;align-items:center;justify-content:center;flex:none}
+  .yazi-marka{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:26px;letter-spacing:-.01em}
+  .giris{padding:56px 0 40px}
+  h1{font-size:clamp(30px,5.2vw,46px);line-height:1.12;letter-spacing:-.02em;font-weight:700;max-width:16em}
+  .giris p{margin-top:18px;font-size:18px;color:var(--ikincil);max-width:36em}
+  .rozet{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:10px 18px;border-radius:999px;background:var(--mor-yuzey);color:var(--mor-koyu);font-weight:600;font-size:15px}
+  .rozet::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--mor)}
+  h2{font-size:22px;letter-spacing:-.01em;margin-bottom:16px}
+  section{padding:28px 0}
+  .izgara{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .izgara.iki{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:20px;padding:22px;box-shadow:var(--golge)}
+  .kart h3{font-size:17px;margin-bottom:6px}
+  .kart p{color:var(--ikincil);font-size:15px}
+  .not{background:var(--kart);border:1px solid var(--cizgi);border-radius:20px;padding:22px}
+  .not p+p{margin-top:10px}
+  .not p{color:var(--ikincil);font-size:15px}
+  .not strong{color:var(--metin)}
+  footer{padding:36px 0 48px;color:var(--ikincil);font-size:14px;border-top:1px solid var(--cizgi);margin-top:24px}
+  footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<div class="sar">
+  <header>
+    <a class="marka" href="./" aria-label="Habbe">
+      <span class="simge" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 48 48"><g fill="currentColor"><path d="M2.183,32 A24,24 0 0 0 45.817,32 L36.49,32 A16,16 0 0 1 11.51,32 Z"></path><path d="M12.134,33.166 L24,15.353 L35.866,33.166 L37.114,32.334 L24,12.647 L10.886,32.334 Z"></path><path d="M16.14,32.423 a3,3 0 1 0 6,0 a3,3 0 1 0 -6,0 Z"></path><path d="M20.5,11.375 a3.5,3.5 0 1 0 7,0 a3.5,3.5 0 1 0 -7,0 Z M22.25,11.375 a1.75,1.75 0 1 1 3.5,0 a1.75,1.75 0 1 1 -3.5,0 Z"></path></g></svg>
+      </span>
+      <span class="yazi-marka">Habbe</span>
+    </a>
+  </header>
+
+  <main>
+    <div class="giris">
+      <h1>Katılım hisselerinizin arındırma ve zekât hesabı, telefonunuzda.</h1>
+      <p>Habbe, portföyünüzdeki katılım hisseleri için arındırma tutarını dönem dönem hesaplar, zekât hesabınıza yardım eder ve her rakamın kaynağını gösterir.</p>
+      <span class="rozet">Yakında Google Play'de</span>
+    </div>
+
+    <section aria-labelledby="ne-yapar">
+      <h2 id="ne-yapar">Habbe ne yapar?</h2>
+      <div class="izgara iki">
+        <div class="kart">
+          <h3>Arındırma defteri</h3>
+          <p>Arındırılacak tutarı dönem dönem gösterir. Kesinleşmiş tutarla henüz bitmemiş dönemin tahmini tutarını ayrı tutar.</p>
+        </div>
+        <div class="kart">
+          <h3>Her rakamın kaynağı</h3>
+          <p>Tutarlar, şirketlerin Kamuyu Aydınlatma Platformu'nda (KAP) yayımladığı formlara dayanır; her hesabın yanında kaynağı yazar.</p>
+        </div>
+        <div class="kart">
+          <h3>Uyarılar</h3>
+          <p>Portföyünüzdeki bir şirketin oranları eşiği aştığında sizi bilgilendirir. Ne yapacağınıza siz karar verirsiniz.</p>
+        </div>
+        <div class="kart">
+          <h3>Zekât hesabı</h3>
+          <p>Nisap ve tutarı hesaplamanıza yardım eder. Arındırma ve zekât ayrı ayrı hesaplanır.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="gizlilik">
+      <h2 id="gizlilik">Verileriniz sizde</h2>
+      <div class="izgara">
+        <div class="kart">
+          <h3>Telefonunuzdan çıkmaz</h3>
+          <p>Portföyünüz ve kayıtlarınız yalnızca telefonunuzda, şifreli olarak saklanır. Hesap açmanız gerekmez.</p>
+        </div>
+        <div class="kart">
+          <h3>İzleme ve reklam yok</h3>
+          <p>Uygulamada reklam ve kullanıcı izleme kodu yoktur.</p>
+        </div>
+        <div class="kart">
+          <h3>Para Habbe'den geçmez</h3>
+          <p>Bağışınızı kuruluşun kendi sayfasında yaparsınız. Habbe bağışınızı görmez.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="yontem">
+      <h2 id="yontem">Yöntem ve önemli bilgiler</h2>
+      <div class="not">
+        <p>Hesaplar, Türkiye Katılım Bankaları Birliği'nin (TKBB) katılım finansı standardına dayanır. Yöntem kararları henüz bağımsız bir şer'i incelemeden geçmedi; uygulamada onay durumu açıkça gösterilir.</p>
+        <p><strong>Bilgi amaçlıdır, yatırım tavsiyesi değildir.</strong> Habbe alım-satım, para transferi ya da aracılık yapmaz.</p>
+        <p>Gizlilik politikası, uygulama yayımlanmadan önce bu sayfada yer alacaktır.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Habbe · 2026</p>
+  </footer>
+</div>
+</body>
+</html>
