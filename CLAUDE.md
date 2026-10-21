@@ -67,3 +67,5 @@ because what is TRUE and what is APPROVED FOR PUBLIC are different sets.
 - Brand assets (logo files) without explicit instruction.
 
 `arsiv/` = eski taslaklar, canli site `public/index.html`'dir, icerik duzenlemeleri SADECE oraya yapilir.
+
+`public/habbe/` = Wetrech disi ayri urun (Habbe) sayfalari. Yalniz Turkce olabilir; Wetrech'in TR/EN/AR ve iddia kurallarina tabi degildir, Habbe'nin kendi dil kurallarina tabidir. Wetrech ana sayfasindan bu sayfalara baglanti verilmez.
